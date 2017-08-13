@@ -1,5 +1,3 @@
-https://github.com/ammar6885/img-transform
-
 Resize and crop uploaded images on the client side.
 
 ## Installation
@@ -83,7 +81,7 @@ imgTransform(uploadInput.files[0])
 ### Options
 
   **width** new width and crop width in pixels or 'auto'.
-  
+
   **height** new height and crop height in pixels or 'auto'.
 
 The 'auto' method with perform the 'crop' and 'resize' operations togather with the both offsets set to 'auto' and mode set to 'cover'.
