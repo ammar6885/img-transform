@@ -30,7 +30,9 @@ imgTransform(uploadInput.files[0])
 #### Options
 
   **width** new width in pixels or 'auto'.
+
   **height** new height in pixels or 'auto'.
+
   **mode** _optional_ - preserve image ratio with two options 'cover' | 'contain'
 
   _note_: if one of dimensions set to 'auto' the other dimension must be set to pixel value.
@@ -47,8 +49,11 @@ imgTransform(uploadInput.files[0])
 
 #### Options
   **width** crop width in pixels or 'auto'.
+
   **height** crop height in pixels or 'auto'.
+
   **leftOffset** crop left offset in pixels or 'auto'.
+
   **topOffset** crop top offset in pixels or 'auto'.
 
   Dimensions 'auto' options to preserve the image ratio.
@@ -78,6 +83,7 @@ imgTransform(uploadInput.files[0])
 ### Options
 
   **width** new width and crop width in pixels or 'auto'.
+  
   **height** new height and crop height in pixels or 'auto'.
 
 The 'auto' method with perform the 'crop' and 'resize' operations togather with the both offsets set to 'auto' and mode set to 'cover'.
