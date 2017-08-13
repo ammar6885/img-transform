@@ -1,3 +1,5 @@
+https://github.com/ammar6885/img-transform
+
 Resize and crop uploaded images on the client side.
 
 ## Installation

@@ -14,5 +14,9 @@
   ],
   "author": "Ammar Mourad",
   "email": "amrmrdb51@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ammar6885/img-transform"
+  },
   "license": "ISC"
 }
