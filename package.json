@@ -1,0 +1,18 @@
+{
+  "name": "img-transform",
+  "version": "1.0.0",
+  "description": "Resize and crop uploaded image file on client side",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "resize",
+    "crop",
+    "dataUrl",
+    "image"
+  ],
+  "author": "Ammar Mourad",
+  "email": "amrmrdb51@gmail.com",
+  "license": "ISC"
+}
