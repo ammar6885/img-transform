@@ -109,8 +109,20 @@
     cropTop = undefined;
 
     if (typeof file === 'string') {
-      result = file;
       imgType = type || 'image/jpeg';
+
+      if (!type) {
+        if (file.indexOf('data:') === -1)
+          file = "data:" + imgType + ";base64," + file;
+        else
+          type = data.split(',')[0].split(';')[0].split(':')[1] || imgType;
+
+      } else {
+        if (file.indexOf('image') === -1)
+          file = "data:" + imgType + ";base64," + file;
+      }
+
+      result = file;
       setTimeout(function () { next(); }, 5);
     } else {
       var reader = new FileReader();

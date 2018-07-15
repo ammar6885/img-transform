@@ -1,6 +1,6 @@
 {
   "name": "img-transform",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Resize and crop uploaded image file on client side",
   "main": "index.js",
   "scripts": {

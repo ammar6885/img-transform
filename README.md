@@ -8,12 +8,26 @@ $ npm install img-transform
 
 ## Usage
 
+
+### imgTrasform
+
 ```js
 imgTransform(uploadInput.files[0], 'image/jpeg')
   .done(function (dataUrl) {
     // your code here
   });
 ```
+
+**imgTransform** is the main function that does nothing if it eas called individually.
+
+
+#### arguments
+
+**file**: input file object or a dataurl string including meta _"data:image/jpeg;base64,"_ or not.
+
+**type**: exported mimeType default is input file mime type or dataurl meta mime type if found, otherwise _"image/jpeg"_ is the default mime type.
+
+
 
 ### Resize
 
@@ -25,15 +39,18 @@ imgTransform(uploadInput.files[0])
   });
 ```
 
-#### Options
+
+#### arguments
 
   **width** new width in pixels or 'auto'.
 
   **height** new height in pixels or 'auto'.
 
-  **mode** _optional_ - preserve image ratio with two options 'cover' | 'contain'
+  **mode** _optional_ - preserve image ratio with two arguments 'cover' | 'contain'
 
-  _note_: if one of dimensions set to 'auto' the other dimension must be set to pixel value.
+  _note_: if one of dimensions was set to 'auto' the other dimension must be set to pixel value.
+
+
 
 ### Crop
 
@@ -45,7 +62,9 @@ imgTransform(uploadInput.files[0])
   });
 ```
 
-#### Options
+
+#### arguments
+
   **width** crop width in pixels or 'auto'.
 
   **height** crop height in pixels or 'auto'.
@@ -54,10 +73,13 @@ imgTransform(uploadInput.files[0])
 
   **topOffset** crop top offset in pixels or 'auto'.
 
-  Dimensions 'auto' options to preserve the image ratio.
-  Offsets 'auto' options to center the crop size in related dimension.
+  Dimensions 'auto' option is to preserve the image ratio.
+  Offsets 'auto' option is to center the crop size related to dimensions.
+
+
 
 ### Serial
+
 ```js
 imgTransform(uploadInput.files[0])
   .crop(560, 340, 10, 10)
@@ -69,7 +91,10 @@ imgTransform(uploadInput.files[0])
 
 You have the option to stack the two previous methods as in the example above.
 
-## auto
+
+
+### auto
+
 ```js
 imgTransform(uploadInput.files[0])
   .auto(560, 340)
@@ -78,15 +103,17 @@ imgTransform(uploadInput.files[0])
   });
 ```
 
-### Options
+#### arguments
 
   **width** new width and crop width in pixels or 'auto'.
 
   **height** new height and crop height in pixels or 'auto'.
 
-The 'auto' method with perform the 'crop' and 'resize' operations togather with the both offsets set to 'auto' and mode set to 'cover'.
+The 'auto' method will perform the 'crop' and 'resize' operations togather with both offsets set to 'auto' and mode set to 'cover'.
 
-## done
+
+
+### done
 ```js
 imgTransform(uploadInput.files[0])
   .auto(560, 340)
@@ -95,7 +122,7 @@ imgTransform(uploadInput.files[0])
   });
 ```
 
-### options
+#### arguments
 
   **callback** callback function with the result image in 64string from as the first argument
 
